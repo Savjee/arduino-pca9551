@@ -31,8 +31,8 @@
 // LED states
 #define LED_ON 0x00 // 00
 #define LED_OFF 0x01 // 01
-#define LED_BLINK_0 0x02 // 10
-#define LED_BLINK_1 0x03 // 11
+#define LED_BLINK_0 0b10 // 10
+#define LED_BLINK_1 0b11 // 11
 
 // Helper LED states
 #define ALL_LED_OFF 0x55 // 0x55 = 01 01 01 01
@@ -57,9 +57,9 @@ class PCA9551
     void setPSC0(uint8_t value);
     void setPSC1(uint8_t value);
 
+    uint8_t _write(byte LS, byte value);
   private:
     uint8_t _address;
-    uint8_t _write(byte LS, byte value);
 };
 
 #endif
