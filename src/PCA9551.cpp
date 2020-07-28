@@ -39,6 +39,14 @@ void PCA9551::setPWM1(uint8_t value)
   _write(PWM_1, value);
 }
 
+void PCA9551::setPSC0(uint8_t value){
+  _write(FREQ_PSC0, value);
+}
+
+void PCA9551::setPSC1(uint8_t value){
+  _write(FREQ_PSC1, value);
+}
+
 void PCA9551::turnAllOff()
 {
     // 0x55 => 01 01 01 01

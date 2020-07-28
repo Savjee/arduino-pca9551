@@ -54,6 +54,9 @@ class PCA9551
     void setPWM0(uint8_t value);
     void setPWM1(uint8_t value);
 
+    void setPSC0(uint8_t value);
+    void setPSC1(uint8_t value);
+
   private:
     uint8_t _address;
     uint8_t _write(byte LS, byte value);
